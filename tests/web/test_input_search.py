@@ -1,5 +1,5 @@
 from ebay_testing_project.pages.web.advanced_search_page import advanced_search_page
-from ebay_testing_project.pages.web.list_items_page import list_items_page
+from ebay_testing_project.pages.web.list_items_page import list_items_page, item_match_search_country
 from ebay_testing_project.pages.web.home_page import home_page
 from ebay_testing_project.pages.web.item_page import item_page
 
@@ -30,7 +30,7 @@ def test_advanced_search():
     # нажать далее
     advanced_search_page.click_search_advanced_button()
     # проверить откуда товар
-    item_page.item_match_search_country()
+    item_match_search_country()
     # открыть товар
     list_items_page.open_item_page_from_list()
     # проверить название товара
