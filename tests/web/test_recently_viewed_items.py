@@ -1,18 +1,15 @@
-from selene import browser, have, have, query
-from time import sleep
 from ebay_testing_project.pages.web.home_page import home_page
+from ebay_testing_project.pages.web.item_page import item_page
+from ebay_testing_project.pages.web.list_items_page import list_items_page
 
 
 def test_recently_viewed_items():
-    browser.open('e/row/toolsrefurbishedrow')
-
+    list_items_page.open_list_item()
     # открытие товара из списка
-    browser.all('.s-item.s-item--large')[0].click()
+    list_items_page.open_item_from_gallery_refurbished()
     # скопировать название товара в переменную
-    product_title = browser.element('.x-item-title .ux-textspans--BOLD').get(query.text)
+    item_title = item_page.copy_item_name_to_variable()
     # открыть домашнюю страницу
-    browser.element('#gh-la').click()
-
+    item_page.click_open_home_page_button()
     # сравнить название продукта с недано просмотренным
-    browser.element('.vlp-merch-content-wrap').should(
-        have.text(product_title))
+    home_page.match_recently_view_items(item_title)

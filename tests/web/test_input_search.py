@@ -1,5 +1,5 @@
 from ebay_testing_project.pages.web.advanced_search_page import advanced_search_page
-from ebay_testing_project.pages.web.list_items_page import list_items_pafe
+from ebay_testing_project.pages.web.list_items_page import list_items_page
 from ebay_testing_project.pages.web.home_page import home_page
 from ebay_testing_project.pages.web.item_page import item_page
 
@@ -11,7 +11,7 @@ def test_main_search():
     # на главной стр клик на кнопку поиска
     home_page.click_search_button()
     # открытие товара из результата главного поиска
-    list_items_pafe.open_item_from_gallery()
+    list_items_page.open_item_page_from_list()
     item_page.switch_to_last_browser_tab()
     # проверка что название товара соответствует поиску
     item_page.item_name_match_search()
@@ -32,7 +32,7 @@ def test_advanced_search():
     # проверить откуда товар
     item_page.item_match_search_country()
     # открыть товар
-    list_items_pafe.open_item_page_from_list()
+    list_items_page.open_item_page_from_list()
     # проверить название товара
     item_page.switch_to_last_browser_tab()
-    item_page.item_match_main_search()
+    item_page.item_name_match_search()
