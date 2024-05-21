@@ -38,8 +38,8 @@ def setup_browser(request):
     browser.config.base_url = "https://www.ebay.com/"
     browser.config.driver = driver
     browser.config.driver_options = options
-    browser.config.window_width = 1280
-    browser.config.window_height = 800
+    browser.config.window_width = 1920
+    browser.config.window_height = 1080
     yield
 
     attach.add_screenshot(browser)
