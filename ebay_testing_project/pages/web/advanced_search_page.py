@@ -10,7 +10,7 @@ class AdvancedSearchPage:
 
     def fill_located_in(self):
         with allure.step('Выбрать страну'):
-            browser.element('[data-testid="s0-1-17-6[7]-[4]-LH_LocatedIn"]').click()
+            #browser.element('[data-testid="s0-1-17-6[7]-[4]-LH_LocatedIn"]').click()
             browser.element('[data-testid="s0-1-17-6[7]-5[@field[]]-_salic"]').click()
             browser.element('option[value="104"]').click()
 

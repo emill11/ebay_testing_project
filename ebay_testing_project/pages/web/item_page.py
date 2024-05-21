@@ -14,7 +14,9 @@ class ItemPage:
 
     def item_name_match_search_refurbished(self):
         with allure.step('Проверить что товар соответствует поиску'):
-            browser.element('div.d-breadcrumb__wrapper').should(have.text('Tools'))
+            #browser.element('div.d-breadcrumb__wrapper').should(have.text('Tools'))
+            browser.element('[data-testid="d-breadcrumb"]').should(have.text('Tools'))
+
 
     def click_add_to_cart_button(self):
         with allure.step('Нажать кнопку Add to cart'):
