@@ -35,14 +35,15 @@ def setup_browser(request):
         command_executor=f"https://{login}:{password}@{selenoid_url}",
         options=options)
 
+    browser.config.base_url = "https://www.ebay.com/"
     browser.config.driver = driver
-    browser.open(URL)
+    browser.config.driver_options = options
+    browser.config.window_width = 1920
+    browser.config.window_height = 1080
     yield
 
+    attach.add_screenshot(browser)
+    attach.add_logs(browser)
+    attach.add_video(browser)
 
-attach.add_screenshot(browser)
-attach.add_logs(browser)
-attach.add_html(browser)
-attach.add_video(browser)
-
-browser.quit()
+    browser.quit()
