@@ -11,6 +11,8 @@ def test_add_item_to_cart():
     # добавление товара в корзину и переход в корзину
     item_page.click_add_to_cart_button()
 
+
+
     # проверка что в корзину добавлена одна штука товара
     cart_page.item_added_to_cart_check()
 

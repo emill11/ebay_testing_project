@@ -39,6 +39,7 @@ class ListItemsPage:
 
             # browser.element('[aria-label="Listing options selector. Gallery View selected."]').click()
             #browser.element('#nid-eg0-0 .fake-menu-button__button').click()
+
             browser.element('.srp-controls__control.srp-view-options').click()
             browser.element('.srp-controls__control.srp-view-options').all('.fake-menu-button__item')[0].click()
 

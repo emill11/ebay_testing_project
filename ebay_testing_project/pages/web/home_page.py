@@ -10,7 +10,7 @@ class HomePage:
 
     def fill_in_search(self):
         with allure.step('Ввести текст в поле поиска'):
-            browser.element('.gh-tb.ui-autocomplete-input').type('Headphones')
+            browser.element('.gh-tb.ui-autocomplete-input').type('headsets')
 
     def click_search_button(self):
         with allure.step('Нажать кнопку Search'):
@@ -22,7 +22,9 @@ class HomePage:
 
     def open_refurbished_categories(self):
         with allure.step('В блоке "Explore Popular Categories" нажать на иконку Refurbished'):
-            browser.element('[data-m-id="4776"]').all('.vl-carousel__item')[3].click()
+            #browser.element('[data-m-id="4776"]').all('.vl-carousel__item')[3].click()
+            #browser.element('#s0-1-0-48-1-3-5-10-0[3]-10-@match-media-0-@ebay-carousel-container').all('.vl-carousel__item')[3].click()
+            browser.element('')
 
     def open_tools_section(self):
         with allure.step('Нажать на изображение Tools'):

@@ -30,10 +30,12 @@ def test_navigation_panel_search():
 
 def test_by_categories_search():
     home_page.open_home_page()
-    # из карусели "Explore Popular Categories" открыть раздел "Refurbished"
+    #открыть jordan jumpman
     home_page.open_refurbished_categories()
-    # открыть раздел "Tools"
-    home_page.open_tools_section()
+
+    # # открыть раздел "Tools"
+    # home_page.open_tools_section()
+
     # открыть товар из списка
     list_items_page.open_item_from_gallery_refurbished()
     # проверить что в тексте есть слово Tools

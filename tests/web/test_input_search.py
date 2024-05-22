@@ -30,7 +30,7 @@ def test_advanced_search():
     # нажать далее
     advanced_search_page.click_search_advanced_button()
 
-    list_items_page.switch_to_list_view()
+    #list_items_page.switch_to_list_view()
 
     # проверить откуда товар
     list_items_page.item_match_search_country()

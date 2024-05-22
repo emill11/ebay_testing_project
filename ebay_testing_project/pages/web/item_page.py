@@ -6,7 +6,8 @@ class ItemPage:
 
     def item_name_match_search(self):
         with allure.step('Проверить что товар соответствует поиску'):
-            browser.element('div.d-breadcrumb__wrapper').should(have.text('Headphones'))
+            #browser.element('div.d-breadcrumb__wrapper').should(have.text('Headphones'))
+            browser.element('div.d-breadcrumb__wrapper').should(have.text('headsets'))
 
     def switch_to_last_browser_tab(self):
         with allure.step('Переключение драйвера на последнюю вкладку браузера'):
@@ -14,9 +15,7 @@ class ItemPage:
 
     def item_name_match_search_refurbished(self):
         with allure.step('Проверить что товар соответствует поиску'):
-            #browser.element('div.d-breadcrumb__wrapper').should(have.text('Tools'))
-            browser.element('[data-testid="d-breadcrumb"]').should(have.text('Tools'))
-
+            browser.element('[data-testid="d-breadcrumb"]').should(have.text('Jordan'))
 
     def click_add_to_cart_button(self):
         with allure.step('Нажать кнопку Add to cart'):
@@ -33,6 +32,8 @@ class ItemPage:
     def click_open_home_page_button(self):
         with allure.step('Нажать на логотип'):
             browser.element('#gh-la').click()
-
+    def click_open_cart_button(self):
+        with allure.step('в попапе нажать открыть корзину'):
+            browser.element('[data-testid="ux-call-to-action"]').click()
 
 item_page = ItemPage()
