@@ -6,7 +6,7 @@ class ListItemsPage:
 
     def open_item_page_from_list(self):
         with allure.step('Открыть товар из списка'):
-          browser.all('.s-item.s-item__pl-on-bottom')[1].element('.s-item__link').click()
+            browser.all('.s-item.s-item__pl-on-bottom')[1].element('.s-item__link').click()
 
     def open_item_from_gallery_refurbished(self):
         with allure.step('Открыть товар из галереи'):

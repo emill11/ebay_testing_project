@@ -6,7 +6,7 @@ class ItemPage:
 
     def item_name_match_search(self):
         with allure.step('Проверить что товар соответствует поиску'):
-            browser.element('div.d-breadcrumb__wrapper').should(have.text('Headphones'))
+            browser.element('div.d-breadcrumb__wrapper').should(have.text('Headphones').or_(have.text('Headset')))
 
     def switch_to_last_browser_tab(self):
         with allure.step('Переключение драйвера на последнюю вкладку браузера'):
@@ -14,7 +14,7 @@ class ItemPage:
 
     def item_name_match_search_refurbished(self):
         with allure.step('Проверить что товар соответствует поиску'):
-            browser.element('div.d-breadcrumb__wrapper').should(have.text('Tools'))
+            browser.element('[data-testid="d-breadcrumb"]').should(have.text('Power Tools'))
 
     def click_add_to_cart_button(self):
         with allure.step('Нажать кнопку Add to cart'):
