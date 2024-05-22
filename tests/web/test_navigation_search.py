@@ -35,6 +35,8 @@ def test_by_categories_search():
 
     # # открыть раздел "Tools"
     # home_page.open_tools_section()
+    #в попапе нажать открыть корзину
+    item_page.click_open_cart_button()
 
     # открыть товар из списка
     list_items_page.open_item_from_gallery_refurbished()

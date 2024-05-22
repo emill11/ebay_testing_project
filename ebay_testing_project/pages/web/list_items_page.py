@@ -14,7 +14,7 @@ class ListItemsPage:
 
     def open_list_item(self):
         with allure.step('Открыть список товаров через url'):
-            browser.open('e/row/toolsrefurbishedrow')
+            browser.open('b/Cordless-Drills/184655/bn_7893682?rt=nc&_dmd=2')
 
     def open_apple_section(self):
         with allure.step('В боковом меню выбрать пункт Apple'):

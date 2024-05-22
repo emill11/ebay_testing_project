@@ -10,7 +10,7 @@ class HomePage:
 
     def fill_in_search(self):
         with allure.step('Ввести текст в поле поиска'):
-            browser.element('.gh-tb.ui-autocomplete-input').type('headsets')
+            browser.element('.gh-tb.ui-autocomplete-input').type('headphones')
 
     def click_search_button(self):
         with allure.step('Нажать кнопку Search'):
