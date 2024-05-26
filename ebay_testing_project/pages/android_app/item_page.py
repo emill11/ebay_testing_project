@@ -25,13 +25,17 @@ class ItemPage():
         with allure.step('Выбрать размер'):
             browser.element((AppiumBy.ID, 'com.ebay.mobile:id/text')).click()
 
-    def pop_up_click_add_to_cart_button(self):
+    def pop_up_click_go_to_cart(self):
         with allure.step('Нажать кнопку Add to cart'):
             browser.element((AppiumBy.ID, 'com.ebay.mobile:id/buy_bar_button')).click()
 
     def click_go_to_cart_button(self):
         with allure.step('нажать кнопку Go to cart'):
             browser.element((AppiumBy.ID, 'com.ebay.mobile:id/call_to_action_button')).click()
+
+    def click_add_to_watchlist(self):
+        with allure.step('нажать кнопку add to watchlist'):
+            browser.all((AppiumBy.ID, 'com.ebay.mobile:id/cta_button_plus'))[1].click()
 
 
 item_page = ItemPage()

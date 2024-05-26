@@ -2,7 +2,7 @@ from ebay_testing_project.pages.android_app.cart_page import cart_page
 from ebay_testing_project.pages.android_app.home_page import home_page_app
 from ebay_testing_project.pages.android_app.item_page import item_page
 from ebay_testing_project.pages.android_app.list_items_page import list_items_page
-from ebay_testing_project.pages.android_app.swipe import swipe_up
+from ebay_testing_project.utils.swipe_utils import swipe_up
 
 
 def test_add_item_to_cart():
@@ -15,16 +15,17 @@ def test_add_item_to_cart():
     # Список товаров
     list_items_page.open_item()
 
-    # Прокрутка
-    swipe_up.swipe_q()
+    swipe_up(1)
 
     # товар
     item_page.click_add_to_cart_button()
     item_page.click_color_field()
-    item_page.select_color()
-    item_page.click_size_field()
     item_page.select_size()
-    item_page.click_add_to_cart_button()
+
+    item_page.click_size_field()
+    item_page.select_color()
+
+    item_page.pop_up_click_go_to_cart()
     item_page.click_go_to_cart_button()
 
     # корзина

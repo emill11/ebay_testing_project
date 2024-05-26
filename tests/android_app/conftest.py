@@ -22,4 +22,9 @@ def mobile_management():
     # attach.attach_screen(browser)
     # attach.attach_xml(browser)
 
-    browser.quit()
+    # browser.quit()
+    # browser.driver.quit()
+    # Логирование перед завершением сеанса
+
+    browser.driver.terminate_app('com.ebay.mobile')
+
