@@ -1,6 +1,6 @@
 import pytest
 from selene import browser
-# from utils import attach
+from ebay_testing_project.utils import attach
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 
@@ -24,7 +24,5 @@ def mobile_management():
 
     # browser.quit()
     # browser.driver.quit()
-    # Логирование перед завершением сеанса
 
     browser.driver.terminate_app('com.ebay.mobile')
-

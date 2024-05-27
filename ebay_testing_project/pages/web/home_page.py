@@ -37,7 +37,7 @@ class HomePage:
             browser.element('#gh-sbc-o').element(by.text('Electronics')).click()
 
     def match_recently_view_items(self, product_title):
-        with allure.step('В блоке "Your Recently Viewed Items" отображается просмотренный товар'):
+        with allure.step('В блоке "Your Recently Viewed Items" отображается просмотренный продукт'):
             browser.element('.vlp-merch-content-wrap').should(have.text(product_title))
 
 

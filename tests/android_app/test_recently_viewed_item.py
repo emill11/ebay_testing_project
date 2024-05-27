@@ -20,7 +20,7 @@ def test_recently():
     home_page_app.open_app()
     home_page_app.click_search_field()
     browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_src_text')).type('watch')
-    home_page_app.click_search_button_app()
+    home_page_app.сlick_item_in_drop_down()
     list_items_page.open_item()
     item_title = item_page.copy_item_name_to_variable()
     my_ebay_page.my_ebay_button_click()

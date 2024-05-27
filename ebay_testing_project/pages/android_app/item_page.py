@@ -30,12 +30,14 @@ class ItemPage():
             browser.all((AppiumBy.ID, 'com.ebay.mobile:id/cta_button_plus'))[1].click()
 
     def copy_item_name_to_variable(self):
-        return browser.element(
-            (AppiumBy.XPATH, '//androidx.compose.ui.platform.ComposeView//android.widget.TextView')).get(
-            query.text).strip()
+        with allure.step('Скопировать название продукта в переменную'):
+            return browser.element(
+                (AppiumBy.XPATH, '//androidx.compose.ui.platform.ComposeView//android.widget.TextView')).get(
+                query.text).strip()
 
     def match_brand(self):
-        browser.element((AppiumBy.ANDROID_UIAUTOMATOR, f'new UiSelector().text("ANYCUBIC")')).should(be.visible)
+        with allure.step('Продукт соответствует поиску'):
+            browser.element((AppiumBy.ANDROID_UIAUTOMATOR, f'new UiSelector().text("ANYCUBIC")')).should(be.visible)
 
 
 item_page = ItemPage()

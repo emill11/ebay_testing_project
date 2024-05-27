@@ -18,32 +18,19 @@ from allure_commons.types import Severity
 def test_add_item_to_watchlist():
     home_page_app.open_app()
     home_page_app.click_search_field()
-
     home_page_app.fill_search_field()
-    home_page_app.click_search_button_app()
-
-    # Список товаров
+    home_page_app.сlick_item_in_drop_down()
     list_items_page.open_item()
     item_title = item_page.copy_item_name_to_variable()
-    # товар
     swipe_up(1)
     item_page.click_add_to_watchlist()
-    # нажать на поле выбора и выбрать пункт из выпадайки
     item_page.click_color_field()
     item_page.select_color()
-    # нажать кнопку го
     item_page.pop_up_click_go_to_cart()
     swipe_down(2)
-    # нажать кнопку myeBay
-    # navigation_bar.
     my_ebay_page.my_ebay_button_click()
-
-    # открыть Watchlist
     my_ebay_page.watchlist_button_click()
-
-    # в списке есть товар с сохраненным названием
     watchlist_page.match_recently_view_items(item_title)
-    # нажать на многоточие
     watchlist_page.click_item_actions_button()
     watchlist_page.remove_item_from_watchlist()
     watchlist_page.check_item_removed_from_watchlist()
