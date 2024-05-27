@@ -14,11 +14,15 @@ class HomePageApp:
 
     def fill_search_field(self):
         with allure.step('Заполнить поле ввода'):
-            browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_src_text')).type('jacket')
+            # browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_src_text')).type('jacket')
+            browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_src_text')).type('watch')
 
     def click_search_button_app(self):
         with allure.step('Нажать на кнопку поиска '):
             browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_suggestion_text')).click()
+
+    def click_categories(self):
+        browser.element((AppiumBy.ANDROID_UIAUTOMATOR, f'new UiSelector().text("Categories")')).click()
 
 
 home_page_app = HomePageApp()
