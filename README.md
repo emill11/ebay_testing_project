@@ -23,15 +23,15 @@
 
 ### Проект реализован с использованием
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="40" height="40" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original-wordmark.svg" width="40" height="40" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" width="40" height="40" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" width="40" height="40" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" width="40" height="40" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="40" height="40" />  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original-wordmark.svg" width="40" height="40" />  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg" width="40" height="40" />  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" width="40" height="40" />  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" width="40" height="40" />  
 
-<img src="assets/allure_report.png" width="40" height="40" />
-<img src="assets/appium.png" width="40" height="40" />
-<img src="assets/selene.png" width="40" height="40" />
-<img src="assets/selenium.png" width="40" height="40" />
-<img src="assets/tg.png" width="40" height="40" />
+<img src="assets/allure_report.png" width="40" height="40" />  
+<img src="assets/appium.png" width="40" height="40" />  
+<img src="assets/selene.png" width="40" height="40" />  
+<img src="assets/selenium.png" width="40" height="40" />  
+<img src="assets/tg.png" width="40" height="40" />  
 
