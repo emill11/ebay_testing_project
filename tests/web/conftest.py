@@ -40,8 +40,8 @@ def setup_browser(request):
     browser.config.window_height = 1080
     yield
 
-    attach.add_screenshot(browser)
-    attach.add_logs(browser)
-    attach.add_video(browser)
+    attach.web_add_screenshot(browser)
+    attach.web_add_logs(browser)
+    attach.web_add_video(browser)
 
     browser.quit()

@@ -3,11 +3,15 @@ from selene import browser
 from ebay_testing_project.utils import attach
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 @pytest.fixture(scope='function', autouse=True)
 def mobile_management():
-    url = 'http://127.0.0.1:4723'
+    url = os.getenv('APPIUM_SERVER_URL')
 
     options = UiAutomator2Options()
     options.set_capability('remote_url', url)
@@ -19,10 +23,7 @@ def mobile_management():
 
     yield
 
-    # attach.attach_screen(browser)
-    # attach.attach_xml(browser)
-
-    # browser.quit()
-    # browser.driver.quit()
+    attach.mobile_attach_screen(browser)
+    attach.mobile_attach_xml(browser)
 
     browser.driver.terminate_app('com.ebay.mobile')

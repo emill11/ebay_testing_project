@@ -2,17 +2,17 @@ import allure
 from allure_commons.types import AttachmentType
 
 
-def add_screenshot(browser):
+def web_add_screenshot(browser):
     png = browser.driver.get_screenshot_as_png()
     allure.attach(body=png, name='screenshot', attachment_type=AttachmentType.PNG, extension='.png')
 
 
-def add_logs(browser):
+def web_add_logs(browser):
     log = "".join(f'{text}\n' for text in browser.driver.get_log(log_type='browser'))
     allure.attach(log, 'browser_logs', AttachmentType.TEXT, '.log')
 
 
-def add_video(browser):
+def web_add_video(browser):
     video_url = "https://selenoid.autotests.cloud/video/" + browser.driver.session_id + ".mp4"
     html = "<html><body><video width='100%' height='100%' controls autoplay><source src='" \
            + video_url \
@@ -20,3 +20,17 @@ def add_video(browser):
     allure.attach(html, 'video_' + browser.driver.session_id, AttachmentType.HTML, '.html')
 
 
+def mobile_attach_xml(browser):
+    allure.attach(
+        browser.driver.page_source,
+        name='screen xml dump',
+        attachment_type=allure.attachment_type.XML,
+    )
+
+
+def mobile_attach_screen(browser):
+    allure.attach(
+        browser.driver.get_screenshot_as_png(),
+        name='screenshot',
+        attachment_type=allure.attachment_type.PNG,
+    )
