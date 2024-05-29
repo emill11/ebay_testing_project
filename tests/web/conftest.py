@@ -7,16 +7,12 @@ from dotenv import load_dotenv
 import os
 import allure
 
+load_dotenv()
+
 
 def pytest_addoption(parser):
     parser.addoption("--context", action="store", default="selenoid",
                      help="Context for load options")
-
-
-def pytest_configure(config):
-    context = config.getoption("--context")
-    env_file = f'.env.local.{context}'
-    load_dotenv(env_file)
 
 
 @pytest.fixture(scope="function", autouse=True)
