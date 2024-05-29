@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import os
 import allure
 
-load_dotenv('../../.env.android')
+load_dotenv()
 
 
 @pytest.fixture(scope='function', autouse=True)
