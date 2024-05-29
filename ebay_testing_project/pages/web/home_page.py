@@ -1,4 +1,4 @@
-from selene import browser, by, have
+from selene import browser, by, have, be
 import allure
 
 
@@ -26,7 +26,7 @@ class HomePage:
 
     def open_tools_section(self):
         with allure.step('Нажать на изображение Tools'):
-            browser.all('.carousel__snap-point')[7].click()
+            browser.all('.carousel__snap-point')[7].should(be.visible).click()
 
     def click_shop_by_category_button(self):
         with allure.step('Нажать кнопку Shop by category'):

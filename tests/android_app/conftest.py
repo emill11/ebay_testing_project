@@ -5,8 +5,9 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from dotenv import load_dotenv
 import os
+import allure
 
-load_dotenv()
+load_dotenv('../../.env.android')
 
 
 @pytest.fixture(scope='function', autouse=True)
@@ -23,7 +24,10 @@ def mobile_management():
 
     yield
 
-    attach.mobile_attach_screen(browser)
-    attach.mobile_attach_xml(browser)
+    with allure.step('Добавить скриншот'):
+        attach.mobile_attach_screen(browser)
+
+    with allure.step('Добавить xml'):
+        attach.mobile_attach_xml(browser)
 
     browser.driver.terminate_app('com.ebay.mobile')

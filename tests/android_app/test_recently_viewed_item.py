@@ -16,7 +16,7 @@ from allure_commons.types import Severity
 @allure.tag('Android app')
 @allure.label('owner', 'Emil')
 @allure.label('layer', 'UI')
-def test_recently():
+def test_recently_viewed_item():
     home_page_app.open_app()
     home_page_app.click_search_field()
     browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_src_text')).type('watch')
