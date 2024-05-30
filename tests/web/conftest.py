@@ -55,8 +55,8 @@ def setup_browser(request):
     with allure.step('Добавить логи'):
         attach.web_add_logs(browser)
 
-        if context == "selenoid":
-            with allure.step('Добавить видео'):
-                attach.web_add_video(browser)
+    if context == "selenoid":
+        with allure.step('Добавить видео'):
+            attach.web_add_video(browser)
 
     browser.quit()
