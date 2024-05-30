@@ -14,7 +14,7 @@ class HomePageApp:
 
     def fill_search_field(self):
         with allure.step('Заполнить поле ввода'):
-            browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_src_text')).type('watch')
+            browser.element((AppiumBy.ID, 'com.ebay.mobile:id/search_src_text')).type('headphones')
 
     def сlick_item_in_drop_down(self):
         with allure.step('Нажать на первый пункт выпадайки'):
