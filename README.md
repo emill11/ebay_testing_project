@@ -1,4 +1,4 @@
-# Учебный проект по тестированию сайта и мобильного приложения eBay
+# Учебный проект по тестированию сайта и мобильного приложения eBay.
 
 ![Шапка сайта](assets/ebay.jpg)
 
@@ -31,58 +31,22 @@
 ✔️ поиск продукта через категории  
 ✔️ отображение недавно просмотренного продукта
 
-#### Запуск автотестов выполняется в Selenoid через Jenkins
+#### Запуск автотестов выполняется в Selenoid.
 
 [Проект в Jenkins](https://jenkins.autotests.cloud/job/ebay_project/)
 
-#### Allure report
+#### Allure report:
 
-<style>
-  .media-container {
-    display: flex;
-    justify-content: space-between;
-  }
+<img src="assets/allur_web.jpg" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
+<img src="assets/selenoid.gif" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
 
-  .media-container img,
-  .media-container video {
-    width: 48%;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
+#### Оповещение о результатах прохождения тестов в Telegram:
 
-  .media-container img:hover,
-  .media-container video:hover {
-    transform: scale(1.05);
-  }
-</style>
-
-<div class="media-container">
-  <img src="assets/allur_web.jpg" alt="Allure отчет" onclick="openFullscreen(this)">
-  <video controls onclick="openFullscreen(this)">
-    <source src="assets/Solinoid.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<div style="text-align: center;">
+  <img src="assets/report_tg.jpg" alt="Telegram отчет" style="width: 240px; height: 195px;">
 </div>
 
-<script>
-  function openFullscreen(element) {
-    if (element.requestFullscreen) {
-      element.requestFullscreen();
-    } else if (element.mozRequestFullScreen) { /* Firefox */
-      element.mozRequestFullScreen();
-    } else if (element.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-      element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) { /* IE/Edge */
-      element.msRequestFullscreen();
-    }
-  }
-</script>
-
-#### Оповещение о результатах прохождения тестов в Telegram
-
-<img src="assets/report_tg.jpg" alt="Telegram отчет" style="width: 240px; height: 195px;">
-
-#### Для локального запуска тестов необходимо выполнить команду в терминале
+#### Для локального запуска тестов необходимо выполнить команду в терминале:
 
 ```
 pytest --context=local
@@ -97,8 +61,8 @@ pytest --context=local
 ✔️ отображение недавно просмотренного продукта  
 ✔️ поиск продукта через категории
 
-#### Тесты выполняются в Android Studio или на реальном девайсе
+#### Тесты выполняются в Android Studio или на девайсе:
 
 #### Allure report
 
-<img src="assets/allure_app.jpg" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto;">
+<img src="assets/allure_app.jpg" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
