@@ -31,13 +31,13 @@
 ✔️ поиск продукта через категории  
 ✔️ отображение недавно просмотренного продукта
 
-#### Запуск автотестов выполняется в Selenoid.
+#### Запуск автотестов выполняется в Jenkins.
 
 [Проект в Jenkins](https://jenkins.autotests.cloud/job/ebay_project/)
 
 #### Allure report:
 
-<img src="assets/allur_web.jpg" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
+<img src="assets/allure_web.jpg" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
 <img src="assets/selenoid.gif" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
 
 #### Оповещение о результатах прохождения тестов в Telegram:
@@ -59,10 +59,8 @@ pytest --context=local
 ✔️ добавление продукта в корзину  
 ✔️ добавление продукта в список отслеживаемых  
 ✔️ отображение недавно просмотренного продукта  
-✔️ поиск продукта через категории
+✔️ поиск продукта через категории  
 
-#### Тесты выполняются в Android Studio или на девайсе:
-
-#### Allure report
+#### Allure report  
 
 <img src="assets/allure_app.jpg" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
