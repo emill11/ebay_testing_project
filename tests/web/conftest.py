@@ -43,10 +43,10 @@ def setup_browser(request):
     if context == "local":
         driver = webdriver.Chrome(options=options)
 
-    browser.config.driver = driver
-    browser.config.base_url = "https://www.ebay.com/"
-    browser.config.window_width = 1920
-    browser.config.window_height = 1080
+        browser.config.driver = driver
+        browser.config.base_url = "https://www.ebay.com/"
+        browser.config.window_width = 1920
+        browser.config.window_height = 1080
 
     yield
 
@@ -55,8 +55,8 @@ def setup_browser(request):
     with allure.step('Добавить логи'):
         attach.web_add_logs(browser)
 
-        # if context == "selenoid":
-    with allure.step('Добавить видео'):
-        attach.web_add_video(browser)
+        if context == "selenoid":
+            with allure.step('Добавить видео'):
+                attach.web_add_video(browser)
 
     browser.quit()
