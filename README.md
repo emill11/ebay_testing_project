@@ -38,6 +38,9 @@
 #### Allure report:
 
 <img src="assets/allure_web.jpg" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
+
+#### Видео выполнения одного из тестов:
+
 <img src="assets/selenoid.gif" alt="Allure отчет" onclick="openFullscreen(this)" style="width: 100%; height: auto; transform: scale(0.8);">
 
 #### Оповещение о результатах прохождения тестов в Telegram:
